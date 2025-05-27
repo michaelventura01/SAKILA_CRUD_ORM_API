@@ -1,0 +1,6 @@
+@SAKILA_CRUD_ORM_API_HostAddress = http://localhost:5044
+
+GET {{SAKILA_CRUD_ORM_API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
