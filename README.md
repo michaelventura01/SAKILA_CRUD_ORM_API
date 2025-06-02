@@ -32,10 +32,10 @@ CRUD para emplear un ORM con el consumo de la base de datos sakila
   git branch -r
   
   # halan rama con su nombre
-   git checkout -b michael origin/michael
+   git checkout -b {mi rama} origin/{mi rama}
   
   # actualzan rama con su nombre
-  git pull origin/[mi rama]
+  git pull origin/{mi rama}
 
 ```
 
