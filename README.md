@@ -1,6 +1,25 @@
 # SAKILA_CRUD_ORM_API
 CRUD para emplear un ORM con el consumo de la base de datos sakila
 
+#### Se requiere contar con el modelo de datos siguiente
+<p>Es debido cargar en la base de datos mysql el contexto de datos de <b>SCRIPTS/script_sakila_mysql.sql</b></p>
+
+```
+├───SAKILA_CRUD_ORM_API
+│   │   appsettings.json
+│   │   Program.cs
+│   ├───Controllers
+│   │       CategoriasController.cs
+│   ├───Models
+│   │       CategoriaUnica.cs
+│   │       DBContext.cs
+│   └───Services
+│           CategoriaUnicaService.cs
+└───SCRIPTS
+        script_sakila_mysql.sql
+        truncado de esquema.sql
+
+```
 
 <p>Para trabajar en el proyecto</p>
 
