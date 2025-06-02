@@ -1,0 +1,10 @@
+truncate table dwh.categorias_unicas_pg13;
+truncate table dwh.cliente_direccion;
+truncate table dwh.clientes_rentas_categoria;
+truncate table dwh.pais_ciudad_eri;
+truncate table dwh.paises_ciudades;
+truncate table dwh.pelicula_categoria;
+truncate table dwh.pelicula_elenco_detalle;
+truncate table dwh.peliculas_rentadas_ciudades;
+truncate table dwh.peliculas_rima_paises;
+truncate table dwh.tienda_renta;
