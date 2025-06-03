@@ -19,5 +19,10 @@ namespace SAKILA_CRUD_ORM_API.Services
         {
             _context.categorias_unicas_pg13.Add(categoria);
         }
+
+        public void Update(CategoriasUnica categoria)
+        {
+            _context.categorias_unicas_pg13.Update(categoria);
+        }
     }
 }

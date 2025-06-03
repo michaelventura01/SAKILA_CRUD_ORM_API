@@ -2,10 +2,10 @@
 {
     public class CategoriasUnica
     {
-        public int id { get; set; }
+        public int? id { get; set; }
         public int codigo_categoria { get; set; }
         public string categoria { get; set; }
-        public DateTime fecha_carga { get; set; }
+        public DateTime? fecha_carga { get; set; }
         public string rating {  get; set; } 
 
         public CategoriasUnica() { 

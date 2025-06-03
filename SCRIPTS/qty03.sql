@@ -7,9 +7,11 @@ USE sakila;
 
 create view vw_peliculas_rima_paises as
 SELECT
+
 	film.film_id AS codigo_pelicula,
     film.title AS pelicula,
     COUNT(rental.rental_id) AS total_renta
+
 FROM rental 
 JOIN inventory 
 	ON rental.inventory_id = inventory.inventory_id

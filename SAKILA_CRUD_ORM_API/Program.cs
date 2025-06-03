@@ -15,6 +15,8 @@ builder.Services.AddDbContext<DBContext>(options =>
 );
 
 builder.Services.AddScoped<CategoriaUnicaService>();
+builder.Services.AddScoped<ClienteDireccionService>();
+
 
 var app = builder.Build();
 

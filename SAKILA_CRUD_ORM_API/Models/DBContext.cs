@@ -6,6 +6,8 @@ namespace SAKILA_CRUD_ORM_API.Models
     {
         public DBContext(DbContextOptions<DBContext> options) : base(options) { }
         public DbSet<CategoriasUnica> categorias_unicas_pg13 { get; set; }
+        public DbSet<ClienteDireccion> cliente_direccion { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
