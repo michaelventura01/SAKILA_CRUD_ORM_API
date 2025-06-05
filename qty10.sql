@@ -40,7 +40,8 @@ SELECT
         WHEN SUM(payment.amount) > 150 AND COUNT(rental.rental_id) > 29 THEN '01-Premiun Customer'
         WHEN SUM(payment.amount) < 65 AND COUNT(rental.rental_id) < 15 THEN '02-Low Customer'
         ELSE ''
-    END AS categoria_cliente
+    END AS categoria_cliente,
+	sysdate() fecha_carga
 FROM rental
 INNER JOIN payment ON rental.rental_id = payment.rental_id
 INNER JOIN customer ON payment.customer_id = customer.customer_id

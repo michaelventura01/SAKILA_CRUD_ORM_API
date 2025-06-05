@@ -21,7 +21,8 @@ SELECT
     country.country_id AS codigo_pais,
     country.country AS pais,
     city.city_id AS codigo_ciudad,
-    city.city AS ciudad
+    city.city AS ciudad,
+	sysdate() fecha_carga
 FROM city 
 JOIN country 
     ON city.country_id = country.country_id

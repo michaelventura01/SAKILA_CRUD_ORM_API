@@ -71,7 +71,8 @@ SELECT
             ) * 100, 
             2
         )
-    END AS porcentaje_crecimiento
+    END AS porcentaje_crecimiento,
+	sysdate() fecha_carga
 FROM film
 JOIN inventory ON film.film_id = inventory.film_id
 JOIN rental ON inventory.inventory_id = rental.inventory_id
