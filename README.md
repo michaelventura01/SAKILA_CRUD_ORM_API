@@ -3,6 +3,8 @@ CRUD para emplear un ORM con el consumo de la base de datos sakila
 
 ![endpoints](https://github.com/user-attachments/assets/ed2226a8-c526-4a72-bdb0-c9748fe71307)
 
+#### DIAGRAMA
+https://drive.google.com/file/d/1t1WPUW3-M8O4dU4hOzcR62PUecJHnxv5/view?usp=sharing
 
 #### Se requiere contar con el modelo de datos siguiente
 <p>Es debido cargar en la base de datos mysql el contexto de datos de <b>SCRIPTS/script_sakila_mysql.sql</b></p>
