@@ -18,16 +18,29 @@ namespace SAKILA_CRUD_ORM_API.Controllers
             _categoriaService = categoriaService;
         }
 
-        [HttpGet("AllCategoriasUnicas")]
+        [HttpGet("CategoriasUnicas")]
         public ActionResult<IEnumerable<CategoriasUnica>> getCategorias() {
             return Ok(_categoriaService.GetAll());
         }
 
         [HttpPost("Add")]
-        public ActionResult addCategorias(CategoriasUnica categoria)
+        public ActionResult addCategorias([FromBody] CategoriasUnica categoria)
         {
-            _categoriaService.Add(categoria);
-            return Ok();
+            bool answer = _categoriaService.Add(categoria);
+            return Ok(answer?"CARGADO":"NO FUE CARGADO");
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateCategoria(int id, [FromBody] CategoriasUnica categoria)
+        {
+            if (id != categoria.id)
+                return BadRequest("ID mismatch.");
+
+            var updated = await _categoriaService.Update(categoria);
+            if (!updated)
+                return NotFound();
+
+            return NoContent();
         }
     }
 }

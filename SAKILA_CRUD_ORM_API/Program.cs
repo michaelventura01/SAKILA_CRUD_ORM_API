@@ -16,6 +16,11 @@ builder.Services.AddDbContext<DBContext>(options =>
 
 builder.Services.AddScoped<CategoriaUnicaService>();
 builder.Services.AddScoped<ClienteDireccionService>();
+builder.Services.AddScoped<ClientesRentasCategoriasService>();
+builder.Services.AddScoped<PaisCiudadEriService>();
+builder.Services.AddScoped<PeliculasRentadasCiudadesService>();
+
+
 
 
 var app = builder.Build();
