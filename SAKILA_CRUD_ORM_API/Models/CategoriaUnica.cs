@@ -1,12 +1,15 @@
-﻿namespace SAKILA_CRUD_ORM_API.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace SAKILA_CRUD_ORM_API.Models
 {
     public class CategoriasUnica
     {
+        [Key]
         public int? id { get; set; }
         public int codigo_categoria { get; set; }
         public string categoria { get; set; }
-        public DateTime? fecha_carga { get; set; }
         public string rating {  get; set; } 
+        public DateTime? fecha_carga { get; set; }
 
         public CategoriasUnica() { 
             this.id = 0;

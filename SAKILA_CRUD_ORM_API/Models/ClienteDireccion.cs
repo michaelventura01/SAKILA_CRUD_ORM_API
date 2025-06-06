@@ -1,10 +1,12 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.ComponentModel.DataAnnotations;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace SAKILA_CRUD_ORM_API.Models
 {
     public class ClienteDireccion
     {
-        public int id {  get; set; }
+        [Key]
+        public int? id {  get; set; }
         public int codigo_Cliente { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
@@ -13,7 +15,7 @@ namespace SAKILA_CRUD_ORM_API.Models
         public int codigo_pais { get; set; }
         public string pais { get; set; }
         public string direccion { get; set; }
-        public DateTime fecha_Carga { get; set; }
+        public DateTime? fecha_Carga { get; set; }
 
         public ClienteDireccion()
         {

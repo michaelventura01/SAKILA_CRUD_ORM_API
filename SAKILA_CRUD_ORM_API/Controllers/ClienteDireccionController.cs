@@ -18,11 +18,30 @@ namespace SAKILA_CRUD_ORM_API.Controllers
             _clienteDireccionService = clienteDireccionService;
         }
         
-        [HttpGet("AllClienteDireccion")]
+        [HttpGet("ClienteDireccion")]
         public ActionResult<IEnumerable<ClienteDireccion>> getClientesDirecciones()
         {
             return Ok(_clienteDireccionService.GetAll());
         }
 
+        [HttpPost("Add")]
+        public ActionResult addClientesDirecciones([FromBody] ClienteDireccion clienteDireccion)
+        {
+            bool answer = _clienteDireccionService.Add(clienteDireccion);
+            return Ok(answer ? "CARGADO" : "NO FUE CARGADO");
+        }
+
+        [HttpPut("Update/{id}")]
+        public async Task<IActionResult> UpdatePaisCiudaderi(int id, [FromBody] ClienteDireccion clienteDireccion)
+        {
+            if (id != clienteDireccion.id)
+                return BadRequest("ID mismatch.");
+
+            var updated = await _clienteDireccionService.Update(clienteDireccion);
+            if (!updated)
+                return NotFound();
+
+            return NoContent();
+        }
     }
 }
