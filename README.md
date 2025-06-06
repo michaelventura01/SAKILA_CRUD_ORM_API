@@ -1,21 +1,52 @@
 # SAKILA_CRUD_ORM_API
 CRUD para emplear un ORM con el consumo de la base de datos sakila
 
+![endpoints](https://github.com/user-attachments/assets/ed2226a8-c526-4a72-bdb0-c9748fe71307)
+
+
 #### Se requiere contar con el modelo de datos siguiente
 <p>Es debido cargar en la base de datos mysql el contexto de datos de <b>SCRIPTS/script_sakila_mysql.sql</b></p>
 
 ```
 ├───SAKILA_CRUD_ORM_API
+│   │   appsettings.Development.json
 │   │   appsettings.json
 │   │   Program.cs
+│   │   SAKILA_CRUD_ORM_API.csproj
+│   │   SAKILA_CRUD_ORM_API.csproj.user
+│   │   SAKILA_CRUD_ORM_API.http
 │   ├───Controllers
 │   │       CategoriasController.cs
+│   │       ClienteDireccionController.cs
+│   │       ClientesRentasCategoriasController.cs
+│   │       PaisCiudadEriController.cs
+│   │       PeliculasRentadasCiudadesController.cs
+│   │
 │   ├───Models
 │   │       CategoriaUnica.cs
+│   │       ClienteDireccion.cs
+│   │       ClientesRentasCategorias.cs
 │   │       DBContext.cs
+│   │       PaisCiudadEri.cs
+│   │       PeliculasRentadasCiudades.cs
 │   └───Services
 │           CategoriaUnicaService.cs
+│           ClienteDireccionService.cs
+│           ClientesRentasCategoriasService.cs
+│           PaisCiudadEriService.cs
+│           PeliculasRentadasCiudadesService.cs
 └───SCRIPTS
+        qty01.sql
+        qty02.sql
+        qty03.sql
+        qty04.sql
+        qty05.sql
+        qty06.sql
+        qty07.sql
+        qty08.sql
+        qty09.sql
+        qty10.sql
+        script_sakila_dwh_postgree.sql
         script_sakila_mysql.sql
         truncado de esquema.sql
 
